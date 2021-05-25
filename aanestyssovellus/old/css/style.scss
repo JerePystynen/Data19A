@@ -1,0 +1,209 @@
+$background: #222222;
+$headercolor: #565656;
+$textcolor: #e9e9e9;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background;
+}
+
+footer {
+    position: absolute;
+    left:50%;
+    bottom:0%;
+    transform: translate(-50%, -50%);
+}
+
+h1, h2, h3, h4 {
+    color: $textcolor;
+}
+
+#form-creation {
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    a {
+        display:inline-block;
+        padding:0.5em 3em;
+        border:0.16em solid #FFFFFF;
+        margin:0 0.3em 0.3em 0;
+        #rem {
+            margin:0;
+            padding-left:0.5rem;
+        }
+        box-sizing: border-box;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:'Roboto',sans-serif;
+        font-weight:400;
+        color:#FFFFFF;
+        text-align:center;
+        transition: all 0.15s;
+    }
+    a:hover{
+        color:#DDDDDD;
+        border-color:#DDDDDD;
+    }
+    a:active{
+        color:#BBBBBB;
+        border-color:#BBBBBB;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    input[type=time], label {
+        margin: .4rem 0;
+    }
+    #option input {
+        width: 80%;
+    }
+    div#f-expire {
+        display: inline-block;
+        height: 3rem;
+        width: 100%;
+        input {
+            height: 70%;
+        }
+    }
+
+}
+
+#create-div {
+
+    a {
+        display:inline-block;
+        padding:0.5em 3em;
+        border:0.16em solid #FFFFFF;
+        margin:0 0.3em 0.3em 0;
+        #rem {
+            margin:0;
+            padding-left:0.5rem;
+        }
+        box-sizing: border-box;
+        text-decoration:none;
+        text-transform:uppercase;
+        font-family:'Roboto',sans-serif;
+        font-weight:400;
+        color:#FFFFFF;
+        text-align:center;
+        transition: all 0.15s;
+    }
+    a:hover{
+        color:#DDDDDD;
+        border-color:#DDDDDD;
+    }
+    a:active{
+        color:#BBBBBB;
+        border-color:#BBBBBB;
+    }
+
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+
+    display: flex;
+
+    #create-new-poll-btn {
+        background-color: rgb(173, 50, 50);
+    }
+    #create-new-poll-btn:hover {
+        background-color: rgb(100, 36, 36);
+    }
+    .hide {
+        display: none;
+        position: absolute;
+        pointer-events: none;
+        white-space: nowrap; 
+        width: 150%; 
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    #create-new-poll-btn:hover + .hide {
+        display: block;
+        animation: text_left_move .9s forwards;
+    }
+    .hide.in-active {
+        animation-direction: reverse;
+    }
+}
+
+@keyframes text_left_move {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+@keyframes text_right_move {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
+#ready-div {
+    #option {
+        display: flex;
+    }
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    // min-width: 2rem;
+    // min-height: 2rem;
+    background-color: rgb(55, 69, 71);
+}
+
+nav#top-nav {
+    background-color: $headercolor;
+    width: 100%;
+    
+    display: flex;
+    height: 3rem;
+    
+    form {
+        height: inherit;
+        float: right;
+        display: inline;
+        justify-content: flex-end;
+        margin-left: 20rem;
+
+        h4 {
+            display: flex;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+#selectable-side-poll {
+    background-color: rgb(103, 109, 109);
+    width: 28rem;
+    height: 7rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+#vote-div {
+    #graph {
+        width: 20rem;
+        height: 10rem;
+        background-color: rgb(73, 62, 62);
+    }
+}
+
+@media all and (max-width:30em){
+    .button2 {
+        display:block;
+        margin:0.4em auto;
+    }
+} 

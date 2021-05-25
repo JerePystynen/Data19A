@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/logo.png"/>
+    <link rel="stylesheet" href="css/feedback.css">
+    <script src="js/gobackfunc.js"></script>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <form action="action_page.php">        
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+                <option value="1/5">1/5</option>
+                <option value="2/5">2/5</option>
+                <option value="3/5">3/5</option>
+                <option value="4/5">4/5</option>
+                <option value="5/5">5/5</option>
+            </select>
+        
+            <label for="subject">Your opinion on us</label>
+            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+        
+            <p>What you post will be posted anonymously</p>
+
+            <button onclick="closeTab()" title="Submit Your Review">Submit</button>
+        
+        </form>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,333 @@
+@media only screen and (max-width: 699px) {
+  body {
+    display: none;
+  }
+}
+
+:root {
+  --test-variable: "black";
+  --background: "tropical-island.jpg";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, button {
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url("tropical-island2-flipped.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+#machine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+#machine div {
+  width: inherit;
+}
+
+#machine #money {
+  background-color: #691136;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 8vw;
+  margin: 0.5rem;
+}
+
+#machine #money h1 {
+  text-decoration: underline;
+  font-size: 2vw;
+}
+
+#machine #money div {
+  padding: 1vw;
+}
+
+#machine #money #top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 88%;
+  font-size: 1vw;
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
+}
+
+#machine #money #top #balance {
+  height: inherit;
+  background-color: #583636;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+#machine #money #top #addmon {
+  float: right;
+  right: 0;
+  padding: 2%;
+  padding-left: 1.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
+  background-color: #292727;
+  height: 80%;
+  width: 8vw;
+  -webkit-transform: translateY(-13%);
+          transform: translateY(-13%);
+}
+
+#machine #money #top #addmon img {
+  height: inherit;
+  width: inherit;
+}
+
+#machine #money #top #addmon button {
+  border: none;
+  border: #722a2a 2px solid;
+}
+
+#machine #money #top #addmon #deposit-hole {
+  width: 2.2vw;
+  height: 6vw;
+}
+
+#machine #money #top #addmon div button:nth-child(1), #machine #money #top #addmon div button:nth-child(2) {
+  height: 3vw;
+  width: 2.2rem;
+  display: -ms-grid;
+  display: grid;
+  margin: 0.2vw;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+#machine #money #deposing button {
+  width: 4.3em;
+}
+
+#machine #money #deposing #Deposit_Input {
+  width: inherit;
+  background-color: cyan;
+}
+
+#machine #money #deposit-btn {
+  width: 100%;
+  background-color: #552f2f;
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+}
+
+#machine #money button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 75px;
+  background-color: #807474;
+  border-radius: 10px;
+}
+
+#machine #Rolls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: inherit;
+  height: 52vw;
+  border: 4px solid #461414;
+  border-radius: 5px;
+  background-color: #5b6f7c;
+}
+
+#machine #Rolls #Slot {
+  border: 5px solid rebeccapurple;
+  width: 33%;
+  display: table-cell;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+#machine #Rolls #Slot #VerticalSlot {
+  position: absolute;
+  margin-bottom: 100px;
+}
+
+#machine #Rolls #Slot #S1, #machine #Rolls #Slot #S5 {
+  margin-left: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#machine #Rolls #Slot #S2, #machine #Rolls #Slot #S4 {
+  margin-left: 80%;
+  width: 130%;
+  height: 130%;
+}
+
+#machine #Rolls #Slot #S3 {
+  margin-left: 55%;
+  width: 175%;
+  height: 175%;
+}
+
+#machine #Rolls #Slot #masks {
+  width: inherit;
+  height: inherit;
+}
+
+#machine #Rolls #Slot #masks div {
+  position: absolute;
+  width: inherit;
+  height: 21rem;
+  background-color: rgba(19, 19, 19, 0.85);
+}
+
+#machine #Rolls #Slot #masks div#a {
+  top: 0;
+}
+
+#machine #Rolls #Slot #masks div#b {
+  bottom: 0;
+}
+
+#machine #Rolls #Slot button#LockButton {
+  width: 100%;
+  height: 6vw;
+  background-color: cyan;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#machine #Rolls #Slot button#LockButton img {
+  width: 50%;
+  height: 70%;
+}
+
+#machine #Rolls #Slot #VerticalRow img {
+  background-color: #0f0f0f;
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 10px;
+}
+
+#machine #betting {
+  background-color: white;
+  width: inherit;
+}
+
+#machine #betting button {
+  width: 15%;
+  height: 3vw;
+  border-radius: 10px;
+  background-color: #312f2f;
+  color: white;
+}
+
+#lorem {
+  background-color: #330e63;
+}
+
+#roll-lever {
+  z-index: 1;
+  padding-top: 15rem;
+  margin-left: 0.55vw;
+}
+
+#roll-lever button {
+  background-color: #66a752;
+  border-radius: 2.5rem;
+  -webkit-transform: translate(2vw, -4.5vw);
+          transform: translate(2vw, -4.5vw);
+  width: 8vw;
+  height: 10vw;
+  position: absolute;
+}
+
+#roll-lever img {
+  width: 8vw;
+}
+
+footer {
+  margin-top: 1rem;
+  background-color: #000000;
+  padding: 2rem;
+  padding-left: 3rem;
+}
+
+#reward-tiers {
+  z-index: 0;
+  position: absolute;
+  right: 2vw;
+  top: 1vw;
+  background-color: cyan;
+  border: 4px solid #646464;
+}
+
+#reward-tiers #tier {
+  border: red 5px solid;
+}
+
+#reward-tiers div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#reward-tiers h1 {
+  margin: 1vw;
+  font-size: 40px;
+}
+
+#reward-tiers img {
+  width: 5vw;
+  height: 5vw;
+}
+
+#reward-tiers #tier {
+  vertical-align: middle;
+}
+
+#reward-tiers #reward img {
+  width: 2vw;
+  height: 2vw;
+}
+
+#modifier-buttons button {
+  width: 7.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+}
+
+#modifier-buttons button#mbtn-a {
+  background-color: #24ad37;
+}
+
+#modifier-buttons button#mbtn-b {
+  background-color: #721313;
+}
+
+#modifier-buttons button#mbtn-c {
+  background-color: #48437c;
+}
+
+#modifier-buttons button#mbtn-d {
+  background-color: #706ba3;
+}
+/*# sourceMappingURL=Sass.css.map */

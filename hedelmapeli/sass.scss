@@ -1,0 +1,266 @@
+@media only screen and (max-width: 699px) {
+    body {
+        display: none;
+    }
+}
+:root {
+    --test-variable: "black";
+    --background: "tropical-island.jpg";
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, p, button {
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url("tropical-island2-flipped.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+#machine {
+    display: flex;
+    width: 60vw;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    div {
+        width: inherit;
+    }
+    #money {
+        background-color: rgb(105, 17, 54);
+        display: inline-flex;
+        width: 100%;
+        height: 8vw;
+        margin: 0.5rem;
+        h1 {
+            text-decoration: underline;
+            font-size: 2vw;
+        }
+        div {
+            padding: 1vw;
+        }
+        #top {
+            display: flex;
+            height: 88%;
+            font-size: 1vw;
+            transform: translateY(-3%);
+            #balance {
+                height: inherit;
+                background-color: rgb(88, 54, 54);
+                transform: translateY(-10%);
+            }
+            #addmon {
+                float: right;
+                right: 0;
+                padding: 2%;
+                padding-left: 1.5vw;
+                display: flex;
+                border-radius: 1rem;
+                background-color: rgb(41, 39, 39);
+                height: 80%;
+                width: 8vw;
+                transform: translateY(-13%);
+                img {
+                    height: inherit;
+                    width: inherit;
+                }
+                button {
+                    border: none;
+                    border: rgb(114, 42, 42) 2px solid;
+                }
+                #deposit-hole {
+                    width: 2.2vw;
+                    height: 6vw;
+                }
+                div button:nth-child(1), div button:nth-child(2) {
+                    height: 3vw;
+                    width: 2.2rem;
+                    display: grid;
+                    margin: 0.2vw;
+                    color: white;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        #deposing {
+            button {
+                width: 4.3em;
+            }
+            #Deposit_Input {
+                width: inherit;
+                background-color: cyan;
+            }
+        }
+        #deposit-btn {
+            width: 100%;
+            background-color: rgb(85, 47, 47);
+            transform: translateY(-.3rem);
+        }
+        button {
+            width: fit-content;
+            height: 75px;
+            background-color: rgb(128, 116, 116);
+            border-radius: 10px;
+        }
+    }
+    #Rolls {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: inherit;
+        height: 52vw;
+        border: 4px solid rgb(70, 20, 20);
+        border-radius: 5px;
+        background-color: rgb(91, 111, 124);
+        #Slot {
+            border: 5px solid rebeccapurple;
+            width: 33%;
+            display: table-cell;
+            text-align: center;
+            padding: 1.5rem;
+            #VerticalSlot {
+                position: absolute;
+                margin-bottom: 100px;
+            }
+            #S1, #S5 {
+                margin-left: 100%;
+                width: 100%;
+                height: 100%;
+            }
+            #S2, #S4 {
+                margin-left: 80%;
+                width: 130%;
+                height: 130%;
+            }
+            #S3 {
+                margin-left: 55%;
+                width: 175%;
+                height: 175%;
+            }
+            #masks {
+                width: inherit;
+                height: inherit;
+                div {
+                    position: absolute;
+                    width: inherit;
+                    height: 21rem;
+                    background-color: rgba(19, 19, 19, 0.85);
+                }
+                div#a {
+                    top: 0;
+                }
+                div#b {
+                    bottom: 0;
+                }
+            }
+            button#LockButton {
+                width: 100%;
+                height: 6vw;
+                background-color: cyan;
+                border-radius: 10px;
+                margin-top: 20px;
+
+                img {
+                    width: 50%;
+                    height: 70%;
+                }
+            }
+            #VerticalRow img {
+                background-color: rgb(15, 15, 15);
+                /* background-color: rgb(255, 255, 255); */
+                border-radius: 10px;
+            }
+        }
+    }
+    #betting {
+        background-color: white;
+        width: inherit;
+        button {
+            width: 15%;
+            height: 3vw;
+            border-radius: 10px;
+            background-color: rgb(49, 47, 47);
+            color: white;
+        }
+    }
+    
+}
+#lorem {
+    background-color: rgb(51, 14, 99);
+}
+#roll-lever {
+    z-index: 1;
+    padding-top: 15rem;
+    margin-left: 0.55vw;
+    button {
+        background-color: rgb(102, 167, 82);
+        border-radius: 2.5rem;
+        transform: translate(2vw, -4.5vw);
+        width: 8vw;
+        height: 10vw;
+        position: absolute;
+    }
+    img {
+        width: 8vw;
+    }
+}
+footer {
+    margin-top: 1rem;
+    background-color: #000000;
+    padding: 2rem;
+    padding-left: 3rem;
+}
+#reward-tiers {
+    z-index: 0;
+    position: absolute;
+    right: 2vw;
+    top: 1vw;
+    background-color: cyan;
+    border: 4px solid rgb(100, 100, 100);
+    #tier {
+        border: red 5px solid;
+    }
+    div {
+        display: flex;
+    }
+    h1 {
+        margin: 1vw;
+        font-size: 40px;
+    }
+    img {
+        width: 5vw;
+        height: 5vw;
+    }
+    #tier {
+        vertical-align: middle;
+    }
+    #reward img {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+#modifier-buttons {
+    button {
+        width: 7.5rem;
+        height: 2.5rem;
+        border-radius: 10px;
+    }
+    button#mbtn-a {
+        background-color: rgb(36, 173, 55);
+    }
+    button#mbtn-b {
+        background-color: rgb(114, 19, 19);
+    }
+    button#mbtn-c {
+        background-color: rgb(72, 67, 124);
+    }
+    button#mbtn-d {
+        background-color: rgb(112, 107, 163);
+    }
+}

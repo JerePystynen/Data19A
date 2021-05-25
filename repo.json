@@ -1,0 +1,57 @@
+{
+    "projects":
+    {
+        "main":
+        [
+            {
+                "name":"php-palautelomake",
+                "title":"17 | php-palautelomake",
+                "technologies":[
+                    "php",
+                    "xml"
+                ]
+            },
+            {
+                "name":"aanestyssovellus",
+                "title":"36 | Äänestyssovellus (ilman tietovarastoa)",
+                "technologies":[
+                    "html",
+                    "php",
+                    "scss",
+                    "js",
+                    "json"
+                ]
+            },
+            {
+                "name":"lampotilamuunnin",
+                "title":"409 | Lämpötilamuunnin"
+            },
+            {
+                "name":"kaverilista",
+                "title":"410 | Kaverilista"
+            },
+            {
+                "name":"lomakkeen-validointi",
+                "title":"411 | Lomakkeen validointi"
+            },
+            {
+                "name":"sikanoppapeli",
+                "title":"412 | Sikanoppapeli"
+            },
+            {
+                "name":"hedelmapeli",
+                "title":"413 | Hedelmäpeli"
+            },
+            {
+                "name":"vieraskirjasovellus",
+                "title":"441 | Vieraskirjasovellus"
+            }
+        ],
+        "other":[
+            {
+                "name":"patriotech",
+                "title":"Patriotech"
+            }
+        ]
+    }
+}

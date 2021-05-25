@@ -1,0 +1,191 @@
+<!-- Laitoin kaikki tiedostot tähän yksinkertaisuuden puolesta -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="list.png" type="image/x-icon">
+    <title>Feedback Form</title>
+</head>
+<script>
+    let Reviews = []
+    window.onload = function() {
+        document.getElementById("p-btn").addEventListener("click", function() { SetReview("-") })
+        document.getElementById("n-btn").addEventListener("click", function() { SetReview("+") })
+        loadXMLDoc()
+    }
+
+    async function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var xmlDoc = this.responseXML;
+                var x = xmlDoc.getElementsByTagName("feedback");
+                Reviews = []
+                for (let i = 0; i < x.length; i++) {
+                    let array = []
+                    for (let y = 0; y < x[i].children.length; y++) {
+                        array.push([x[i].children[y].textContent])
+                    }
+                    Reviews.push(array)
+                }
+            }
+        };
+        xmlhttp.open("GET", "data.xml", true);
+        xmlhttp.send();
+
+        setTimeout(() => {
+            SetReview(0);
+        }, 200);
+    }
+
+    let currFeed = 0;
+    function SetReview(x) {
+        if (x == "+") {
+            if (currFeed < Reviews.length-1) currFeed++
+            else currFeed = 0
+        }
+        else if (x == "-") {
+            if (currFeed > 0) currFeed--
+            else currFeed = Reviews.length-1
+        }
+        else currFeed = x
+
+        document.getElementById("data").innerHTML = `"${Reviews[currFeed][0]}"`
+        document.getElementById("bar").innerHTML = `${Reviews[currFeed][1]} - ${Reviews[currFeed][3]}`
+        document.getElementById("num").innerHTML = `${currFeed+1}/${Reviews.length}`
+    }
+</script>
+<style>
+    * {
+        font-family: sans-serif;
+    }
+    nav {
+        position: absolute;
+        left: 50%;
+        transform: Translate(-50%, 50%);
+    }
+    div:nth-of-type(1) {
+        margin-top: 2rem;
+    }
+    div:nth-of-type(2) {
+        margin-top: 4rem;
+    }
+    div {
+        position: relative;
+        background-color: gray;
+        padding: 1.1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border: .3rem #262626 solid;
+        border-radius: 1rem;
+    }
+    input {
+        width: 20rem;
+        display: grid;
+        margin: 1rem;
+    }
+</style>
+<body>
+<nav>
+    <div>
+        <h1>All written Feedback:</h1>
+        <p id="data">[text]</p>
+        <p id="bar">[name] - [date]</p>
+
+        <button id="p-btn"><</button>
+        <button id="n-btn">></button>
+        <p id="num">0/0</p>
+    </div>
+    <div>
+        <h1>Write your own Feedback:</h1>
+        <form method="post">
+            Enter Your Feedback Here:<br>
+            <input type="text" name="ftext" placeholder="Your feedback... ('Good purchase')">
+            <input type="text" name="fname" placeholder="Your username...">
+            <input type="text" name="fmail" placeholder="Your email...">
+            <input type="submit" name="submit">
+        </form>
+    </div>
+</nav>
+</body>
+</html>
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+if (isset($_POST['submit'])) {
+    $data = $_POST['ftext'];
+    if ($data == "") return;
+    $name = $_POST['fname'];
+    $email = $_POST['fmail'];
+
+    $date = date("F d, Y h:i:s A");
+
+//write to a xml file
+
+    $file = "data.xml";
+    if (!file_exists($file)) touch($file);
+    $xml = new DOMDocument("1.0", "UTF-8");
+    $xml->preserveWhiteSpace = falsE;
+    $xml->formatOutput = true;
+    clearstatcache();
+    if (filesize($file)) $xml->load($file);
+    
+    $container = $xml->getElementsByTagName('container')[0];
+    if (!isset($container)) {
+        $container = $xml->createElement("container");
+        $container = $xml->appendChild($container);
+    }
+    
+    $review = $container->appendChild($xml->createElement("feedback"));
+    $review->appendChild($xml->createElement("text", $data));
+    $review->appendChild($xml->createElement("name", $name));
+    $review->appendChild($xml->createElement("mail", $email));
+    $review->appendChild($xml->createElement("date", $date));
+
+    $output = $xml->saveXML();
+    $xml->save($file);
+
+    echo "<script type='text/javascript'>alert('Feedback received!')</script>";
+
+//send email notification
+
+    $send_email_notification = true;
+    
+    if ($send_email_notification) {
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->Host = 'smtp.mailtrap.io';
+        $mail->SMTPAuth = true;
+        $mail->Username = '397c1ec9aaeb72'; //paste one generated by Mailtrap
+        $mail->Password = 'a11363da3805a4'; //paste one generated by Mailtrap
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 2525;
+        
+        $mail->setFrom('info@mailtrap.io', 'Mailtrap');
+        $mail->addReplyTo('info@mailtrap.io', 'Mailtrap');
+        if (checkdnsrr(strval($email)))
+            $mail->addAddress($email, $name);
+        else
+            $mail->addAddress("info@mailtrap.io", "Empty");
+        
+        $mail->Subject = 'Someone has sent a Review as an email via Mailtrap SMTP using PHPMailer!';
+        $mail->isHTML(true);
+        $mailContent = "<h1>$name - $date</h1>
+            <p>`$data`</p>";
+        $mail->Body = $mailContent;
+        
+        if ($mail->send()){
+            echo 'Message has been sent';
+        } else {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        }
+    }
+}
+?>

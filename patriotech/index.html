@@ -1,0 +1,320 @@
+<!doctype html>
+
+<html lang="en">
+<head class="top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style01.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="icon" href="img/logo.png"/>
+    <script src="js/scrollfunction01.js"></script>
+    <script src="js/navbar.js"></script>
+    <title>Patriotech Games</title>
+</head>
+
+<body>
+    
+    <video autoplay muted loop id="backgroundvideo" src="vid/clouds.mp4" type="video/mp4"></video>
+
+    <script src="js/feedback.js"></script>
+    <script src="js/platformfunction.js"></script>
+    <script src="js/gobackfunc.js"></script>
+    
+    <ul class="navBar" id="navBar">
+        <img src="img/patriotech_logo.png">
+        <button onclick="openLink('patreon')" target="#">Patreon</a>
+        <button onclick="openLink('twitter')" target="#">Twitter</a>
+        <button onclick="openLink('youtube')" target="#">Youtube</a>
+        <button onclick="openLink('instagram')" target="#">Instagram</a>
+        <button onclick="openLink('twitch')" target="#">Twitch</a>
+        <button onclick="openLink('discord')" target="#">Discord</a>
+    
+        <ul id="desktop-menu">
+            <button onclick="window.open('legends.html','_blank')">Legends</button>
+            <button onclick="window.open('dunker.html','_blank')">Dunker</button>
+            <button onclick="window.open('asphalt.html','_blank')">Asphalt</button>
+        </ul>
+        
+        <select id="mobile_menu">
+            <option onclick="window.open('legends.html','_blank')">Legends</option>
+            <option onclick="window.open('dunker.html','_blank')">Dunker</option>
+            <option onclick="window.open('asphalt.html','_blank')">Asphalt</option>
+        </select>
+
+        <button onclick="ScrollTo('about')" title="What We Stand For">About Us</button>
+        <button onclick="giveContacts()" title="Contact Information">Contacts</button>
+    </ul>
+
+    <ul class="scroll_button">
+        <button onclick="ScrollTo('0')" class="button" title="Scroll To Top"><img src="img/arrow.png"></button>
+        <button onclick="ScrollTo('topslogan')" class="button" title="Scroll To Patriotech's Games"><img src="img/game_icon2.png"></button>
+        <button onclick="ScrollTo('about')" class="button" title="Scroll To Bottom"><img src="img/arrow2.png"></button>
+    </ul>
+
+    <div class="content"> 
+        <li>
+    
+    
+            <div id="topbar">
+                <div id="toplogo">
+                    <hr>
+                    <img id="complogo" src="img/patriotech_logo.png"></image>
+                    <br>
+                    <h1 class="slogan">Patriotech Games</h1>
+                    <hr>
+                </div>
+                
+                <!-- <button onclick="Platform('plat_0','none')" class="button" id="plat_0">Toggle</button>
+                
+                <div id="topcontacts">
+                    <hr>
+    
+                    <button onclick="Platform('plat_1','patreon')" class="button" id="plat_1">Patreon</button>
+                    <button onclick="Platform('plat_2','twitter')" class="button" id="plat_2">Twitter</button>
+                    <button onclick="Platform('plat_3','youtube')" class="button" id="plat_3">Youtube</button>
+                    <button onclick="Platform('plat_4','instagram')" class="button" id="plat_4">Instagram</button>
+                    <button onclick="Platform('plat_5','twitch')" class="button" id="plat_5">Twitch</button>
+                    <button onclick="Platform('plat_6','discord')" class="button" id="plat_6">Discord</button>
+
+                    <hr>
+                </div>
+    
+                <div id="social_platform">
+                    <img id="platform_img" src="img/img01.jpg">
+                    <h1 id="platform_header">Otsikko</h1>
+                    <button onclick="ChangeImage()" id="p_arrow1"><</button>
+                    <button onclick="ChangeImage()" id="p_arrow2">></button>
+                    <h2 id="platform_description">---------- SAMPLE TEXT --------</h2>
+                    <a id="platform_button" href="#" target="blank" class="button">TEST</a>
+                    <div id="circle">
+                        <img src="img/circle_empty.png">
+                        <img src="img/circle_empty.png">
+                        <img src="img/circle_empty.png">
+                    </div>        
+                </div>
+            </div> -->
+        </li>
+        
+        <div id="topslogan">
+            <h1 class="slogan">We make the games<br> - || - <br>Jokaiselle jotakin</h1>
+
+            <button onclick="ScrollTo('ga_2')" class="button">Dunker</button>
+            <button onclick="ScrollTo('ga_1')" class="button">The Legends Of The League</button>
+            <button onclick="ScrollTo('ga_3')" class="button">Asphalt</button>
+
+            <p>Have you ever wanted to have the real fun?<br>
+                Get on the ride! Check these out!<br>
+                100% of our profits go towards making the game-industry a more exotic and better place!
+            </p>
+
+        </div>
+
+        <hr>
+        
+        <div id="games">
+            <script src="js/videofunction.js"></script>
+            
+            <div class='some-page-wrapper'>
+            <div class='column' id="ga_2">
+                <h1>The Legends Of The League</h1>
+                
+                <div class="big_game_content" id="Game02vid">
+                    <iframe width="900" height="520" src="https://www.youtube.com/embed/DS0YTlsFSTE" allowfullscreen></iframe> 
+                </div>
+
+                <img class="big_game_content" id="Game02img" src="img/img01.jpg"></image>
+                
+                <li id="videofunction">
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','video')"><img src="img/vid_icon01.png"></button>
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','img1')"><img src="img/one.png"></button>
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','img2')"><img src="img/two.png"></button>
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','img3')"><img src="img/three.png"></button>
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','img4')"><img src="img/four.png"></button>
+                    <button onclick="ChangeImage('game2','Game02img','Game02vid','img5')"><img src="img/five.png"></button>
+                </li>
+                <br>
+                <a id="link_button" href="legends.html" target="blank" class="button">Check out our RTSG!</a>
+            </div>
+            
+            <hr>
+            
+                <div class='row'>
+                    <div class='column'>
+                        <div class='green-column' id="ga_2">
+                            <h1>Dunker</h1>
+                            <div class="small_game_content" id="Game01vid">
+                                <iframe width="900" height="520" src="https://www.youtube.com/embed/sCZNWjem6F4" allowfullscreen></iframe>
+                            </div>
+                            <img class="small_game_content" id="Game01img" src="img/1.png"></image>
+                            
+                            <li id="videofunction">
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','video')"><img src="img/vid_icon01.png"></button>
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','img1')"><img src="img/one.png"></button>
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','img2')"><img src="img/two.png"></button>
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','img3')"><img src="img/three.png"></button>
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','img4')"><img src="img/four.png"></button>
+                                <button onclick="ChangeImage('game1','Game01img','Game01vid','img5')"><img src="img/five.png"></button>
+                            </li>
+                            <br>
+                            <!-- <p>Want to shoot some fools? Dunker is a fast-paced FPS hero shooter. You can play as 7 different characters.</p> -->
+                            <a id="link_button" href="dunker.html" target="blank" class="button">Check out Dunker!</a>        
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class='column'>
+                        <div class='blue-column' id="ga_3">
+                            <h1>(Asu!)phalt</h1>
+                            <div class="small_game_content" id="Game03vid">
+                                <iframe width="900" height="520" src="https://www.youtube.com/embed/-Dvc42Dotas" allowfullscreen></iframe>
+                            </div>
+        
+                            <img class="small_game_content" id="Game03img" src="img/img02.jpg"></image>
+                            
+                            <li id="videofunction">
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','video')"><img src="img/vid_icon01.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img1')"><img src="img/one.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img2')"><img src="img/two.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img3')"><img src="img/three.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img4')"><img src="img/four.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img5')"><img src="img/five.png"></button>
+                            </li>
+                            <br>
+                            <!-- <p>Or do you just want to just chill with your friends? This rhythm game is pretty chill.</p> -->
+                            <a id="link_button" href="asphalt.html" target="blank" class="button">Check out Asu!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div id="some-page-wrapper">
+                    <div class='column'>
+                        <div class='red-column' id="ga_4">
+                            <h1>(Asu!)phalt</h1>
+                            <div class="small_game_content" id="Game03vid">
+                                <iframe src="https://www.youtube.com/embed/-Dvc42Dotas" allowfullscreen></iframe>
+                            </div>
+        
+                            <img class="small_game_content" id="Game03img" src="img/img02.jpg"></image>
+                            
+                            <li id="videofunction">
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','video')"><img src="img/vid_icon01.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img1')"><img src="img/one.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img2')"><img src="img/two.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img3')"><img src="img/three.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img4')"><img src="img/four.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img5')"><img src="img/five.png"></button>
+                            </li>
+                            <br>
+                            <p>Or do you just want to just chill with your friends? This rhythm game is pretty chill.</p>
+                            <a id="link_button" href="asphalt.html" target="blank" class="button">Check out Asu!</a>
+                        </div>
+                    </div>
+                    <div class='column'>
+                        <div class='orange-column' id="ga_5">
+                            <h1>(Asu!)phalt</h1>
+                            <div class="small_game_content" id="Game03vid">
+                                <iframe src="https://www.youtube.com/embed/-Dvc42Dotas"></iframe>
+                            </div>
+        
+                            <img class="small_game_content" id="Game03img" src="img/img02.jpg"></image>
+                            
+                            <li id="videofunction">
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','video')"><img src="img/vid_icon01.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img1')"><img src="img/one.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img2')"><img src="img/two.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img3')"><img src="img/three.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img4')"><img src="img/four.png"></button>
+                                <button onclick="ChangeImage('game3','Game03img','Game03vid','img5')"><img src="img/five.png"></button>
+                            </li>
+                            <br>
+                            <p>Or do you just want to just chill with your friends? This rhythm game is pretty chill.</p>
+                            <a id="link_button" href="asphalt.html" target="blank" class="button">Check out Asu!</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        
+        <div id="linkz">
+            <hr>
+            <h1>PATRIOTECH</h1>
+            <a href="https://esedu.sharepoint.com/:p:/r/sites/Data16/Jaetut%20asiakirjat/aa_Asiakaspalvelu%20ja%20yritt%C3%A4jyys%202019/Jeren%26Eeliksen%20yritys%20(Patriotech)/%23536%20Asiakaspalvelu%20ja%20yritt%C3%A4jyys%20-%20yrityksen%20perustaminen.pptx?d=w12451f70d1724ce4ae0fc35fc3971c95&csf=1&e=k9kB3X">Yrityksen Suunnitelma</a>
+        
+            <hr>
+
+            <h1>About Business</h1>
+            <a href="https://esedu.sharepoint.com/:p:/r/sites/Data16/_layouts/15/Doc.aspx?sourcedoc=%7Bee05c8b4-a7f0-4b5b-a26b-42e1e641e17b%7D&action=edit&uid=%7BEE05C8B4-A7F0-4B5B-A26B-42E1E641E17B%7D&ListItemId=3706&ListId=%7B697E0E6A-4DD0-40B1-9599-94006E37AD0A%7D&odsp=1&env=prod">Palvelutilanne</a>
+            <br>
+            <a href="https://esedu.sharepoint.com/:x:/r/sites/Data16/Jaetut%20asiakirjat/aa_Asiakaspalvelu%20ja%20yritt%C3%A4jyys%202019/Jeren%26Eeliksen%20yritys%20(Patriotech)/lasku/lasku.xlsx?d=wb7ef3c18d6864282beba84f14b17a306&csf=1&e=TMedOr">Laskulomake</a>
+            <br>
+            <a href="https://esedu.sharepoint.com/:x:/r/sites/Data16/Jaetut%20asiakirjat/aa_Asiakaspalvelu%20ja%20yritt%C3%A4jyys%202019/Jeren%26Eeliksen%20yritys%20(Patriotech)/lasku/matkalasku.xlsx?d=w61920154b6ad4b84ad30eebae4ed12b9&csf=1&e=c4znhW">Matkalaskulomake</a>
+            <br>
+            <a href="https://esedu.sharepoint.com/:x:/r/sites/Data16/Jaetut%20asiakirjat/aa_Asiakaspalvelu%20ja%20yritt%C3%A4jyys%202019/Jeren%26Eeliksen%20yritys%20(Patriotech)/yrityksen%20budjetti%20tulot%20ja%20menot/yrityksen_tulot_menot_taulukkoprojekti.xlsx?d=w6756a1a193b5428abdb430225535d317&csf=1&e=JN22eG">Budjettitaulukko</a>
+            <br>
+            <a href="https://esedu.sharepoint.com/:x:/r/sites/Data16/Jaetut%20asiakirjat/aa_Asiakaspalvelu%20ja%20yritt%C3%A4jyys%202019/Jeren%26Eeliksen%20yritys%20(Patriotech)/ty%C3%B6aika/ty%C3%B6aika.xlsx?d=w8ba13b5736634791802812b52bf80190&csf=1&e=g82DDu">Työaikataulukko</a>
+            <hr>
+        </div>
+
+
+        <div id="about">
+            <hr>
+            <h1>Patriotech is a school project</h1>
+            <hr>
+            <h2>Patriotech's Founders</h2>
+            
+            <h1>Eelis</h1>
+            <video controls src="vid/Eelis - itseni esittely videolla.mp4"></video>
+            
+            <h1>Jere</h1>
+            <video controls src="vid/Jere - itseni esittely videolla.mp4"></video>
+
+            <hr>
+            <p>
+                Welcome to Patriotech! Your number one source for all things games.<br>
+                We're dedicated to giving you the very best of games, with a focus on originality, customer service and uniqueness.
+    
+                Founded in 2019 by two young entrepreneuric boys, Patriotech has come a long way from its beginnings in a small city. 
+                When those two young boys first started out, their passion for making game industry better drove him to do intense research, 
+                and gave them the impetus to turn hard work and inspiration into to a booming online store. 
+                We now serve customers all over the world, and are thrilled to be a part of the fair trade wing of the game industry.
+                
+                We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+                
+                <br><br>Sincerely,<br>
+                Patriotech
+            </p>
+        
+            <hr>
+        </div>
+        
+        
+        <div id="bottombar">
+            <hr>
+            
+            <h1 class="slogan">We sell the games</h1>
+
+            <hr>
+            
+            <div id="bottomlinks">
+                <script src="js/feedback.js"></script>
+                <hr>
+                <button onclick="giveFeedBack()" title="Give feedback">Feedback</button>
+               
+                <button onclick="giveContacts()" class="button" title="See our contacts">Contacts</button>
+                <button onclick="giveJobs()" class="button" title="Apply for one of our jobs">Jobs</button>    
+                <button onclick="giveInquiries()" class="button" title="Email address for business inquiries.">Inquiries</button>
+                <button onclick="giveTermsOfService()" title="Our Rules">Terms of Service</button>
+                <button onclick="giveCredits()" title="Credit comes where credit is due">Credit</button>
+                <hr>
+            </div>
+
+            <hr>
+            <h5 class="slogan" id="copy"> - - - - -  (C) Patriotech inc. 2019 Jere Pystynen & Eelis Läntinen - - - - - </h5>
+            <hr>
+        </div>
+    </div>
+</body>
+<footer></footer>
+</html>

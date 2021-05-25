@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass.css">
+    <script src="main.js"></script>
+    <link rel="icon" href="pear.png">
+    <title>Jere's Juicy Fruit Machine</title>
+</head>
+<body>
+    <div id="machine">
+        <div>
+            <div id="money">
+                <div>
+                    <h1 onclick="window.open('https://github.com/JerePystynen',target='#')">Jere's Juicy Fruit Machine</h1>   
+                    <!-- <div id="modifier-buttons">
+                        <button onclick="ChangeDirection()" id="mbtn-d">Change Direction</button>
+                        <button onclick="ChangeRow(-1)" id="mbtn-b">Remove Row</button>
+                        <button onclick="ChangeRow(1)" id="mbtn-c">Add Row</button>
+                    </div> -->
+                </div>
+                <div id="top">
+                    <div id="balance">
+                        <h2>Fruit Coins</h2>
+                        <h3 id="balance-text">Money: 0€</h3>
+                        <h3 id="betamount-text">Bet: 0€</h3>
+                    </div>
+                    <div id="addmon">
+                        <button onclick="AddMoney(1)" id="deposit-hole"><img src="coin-insert-hole.png"></button>
+                        <div>
+                            <button onclick="AddMoney(5)" id="deposit-btn">x5</button>
+                            <button onclick="AddMoney(10)" id="deposit-btn">x10</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Rolls">
+                <div id="Slot">
+                    <div id="masks">
+                    </div>
+                    <div id="VerticalRow" class="slots">
+                        <img src="fruit-questionmark.png" id="S1">
+                        <img src="fruit-questionmark.png" id="S2">
+                        <img src="fruit-questionmark.png" id="S3">
+                        <img src="fruit-questionmark.png" id="S4">
+                        <img src="fruit-questionmark.png" id="S5">
+                    </div>
+                    <button onclick="Lock(this.parentNode)" id="LockButton">
+                        <img src="lock.png">
+                    </button>
+                </div>
+            </div>
+            <div id="betting">
+                <button onclick="Bet('zero')">0</button>
+                <button onclick="Bet(-5)">-5</button>
+                <button onclick="Bet(-1)">-1</button>
+                <button onclick="Bet(1)">+1</button>
+                <button onclick="Bet(5)">+5</button>
+                <button onclick="Bet('all')">All</button>
+            </div>
+        </div>
+        <div id="roll-lever">
+            <button onclick="Roll()" id="mbtn-a">Roll</button>
+            <img src="pull-lever.png">
+        </div>
+    </div>
+
+    <div id="reward-tiers">
+        <div id="tier">
+            <div id="combo">
+                <img src="apple.png">
+                <img src="apple.png">
+                <img src="apple.png">
+            </div>
+            <div id="reward">
+                <h1>2</h1>
+                <img src="coin-nbg.png">
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <h1>Kuinka käyttää:</h1>
+    <h2>1. Syötä rahaa koneeseen haluamasi määrä.</h2>
+    <h2>2. Valitse rivien alta kuinka paljon rahaa haluat veikata. ("Bet")</h2>
+    <h2>3. Sitten, paina Roll-vipua</h2>
+</footer>
+</html>

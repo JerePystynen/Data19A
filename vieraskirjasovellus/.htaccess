@@ -1,0 +1,29 @@
+#remove file extention
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+#remove access to "moderator.php" to only be allowed through "pass.php" if the form's password is correct
+<Files "moderator.php">
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule (.*)/moderator(.*) - [L,NC]
+
+    RewriteCond %{QUERY_STRING} preview [NC]
+    RewriteRule ^ index.php [L]
+
+    RewriteCond %{REQUEST_URI} !/moderator [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}/index.html !-f
+    RewriteRule . /index.html [L]
+
+    RewriteRule ^index\.php$ - [L]
+
+    RewriteRule ^moderator$ moderator/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+</Files>

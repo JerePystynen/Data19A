@@ -1,0 +1,63 @@
+{
+    "polls": [
+        {
+            "creator": "CREATOR",
+            "password": "PASSWORD",
+            "date": "2.2.2021",
+            "time": "13.58",
+            "header": "What is the best thing on pizza?",
+            "options": [
+                "Pineapple",
+                "Oregano",
+                "Avocado",
+                "Shrimp",
+                "Sushi",
+                "Beef"
+            ],
+            "voters": [
+                {
+                    "id":"Jore",
+                    "choice":0
+                },
+                {
+                    "id":"John",
+                    "choice":1
+                },
+                {
+                    "id":"Michael",
+                    "choice":2
+                },
+                {
+                    "id":"James",
+                    "choice":2
+                },
+                {
+                    "id":"Arnold",
+                    "choice":3
+                }
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": "username",
+            "password": "password"
+        },
+        {
+            "id": "username1",
+            "password": "123"
+        },
+        {
+            "id": "123",
+            "password": "123"
+        },
+        {
+            "id": "user",
+            "password": "123"
+        },
+        {
+            "id": "jeffthekiller",
+            "password": "123456"
+        }
+    ]
+}

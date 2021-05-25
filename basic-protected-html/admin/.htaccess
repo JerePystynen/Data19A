@@ -1,0 +1,4 @@
+AuthUserFile "/xampp/htdocs/passtest/admin/.htpasswd"
+AuthName "Admin Only"
+AuthType Basic
+require valid-user

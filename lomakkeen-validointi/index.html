@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS validointi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="title">
+        <h1>Rekisteröitymislomake</h1>
+        <p>Siirry kentästä toiseen tab-näppäimellä.</p>
+    </div>
+    <div id="master">
+        <form action="POST">
+            <div>
+                <div id="t1">
+                    <h3>Käyttäjän ID:</h3>
+                </div>
+                <div>
+                    <input type="number" name="Fid" id="">
+                    <h4 id="FidV"></h4>
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Salasana:</h3>
+                </div>
+                <div>
+                    <input type="password" name="Fpwd" id="">
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Nimi:</h3>
+                </div>
+                <div>
+                    <input type="text" name="Fusr" id="">
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Osoite:</h3>
+                </div>
+                <div>
+                    <input type="text" name="Fadd" id="">
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Maa:</h3>
+                </div>
+                <div>
+                    <select name="Fcntr" id="">
+                        <option value="0">Suomi</option>
+                        <option value="1">Ruotsi</option>
+                        <option value="2">Venäjä</option>
+                        <option value="3">Muu</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Postinumero:</h3>
+                </div>
+                <div>
+                    <input type="text" name="Fpst" id="">
+                    <h4 id="FpstV"></h4>
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Sähköposti:</h3>
+                </div>
+                <div>
+                    <input type="email" name="Fmail" id="">
+                    <h4 id="FmailV"></h4>
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Sukupuoli:</h3>
+                </div>
+                <div id="t1">
+                    <input type="radio" name="Fg" id="Fg0" value="g0">Mies
+                    <input type="radio" name="Fg" id="Fg1" value="g1">Nainen
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Kieli:</h3>
+                </div>
+                <div>
+                    <input type="checkbox" name="Flng0" id="">suomi
+                    <input type="checkbox" name="Flng1" id="">Muu kuin suomi
+                </div>
+            </div>
+            <div>
+                <div id="t1">
+                    <h3>Lisätietoja:*</h3>
+                </div>
+                <div>
+                    <textarea name="Finfo" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </form>
+
+        <button id="submit-btn"><h3>Lähetä</h3></button>
+        
+        <h4>(*) ei pakollisia</h4>
+    </div>
+</body>
+</html>

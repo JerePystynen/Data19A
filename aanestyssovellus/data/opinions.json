@@ -1,0 +1,44 @@
+{
+    "opinions": [
+        {
+            "title": "Mikä on parasta pitsan päällä?",
+            "creation-time":"13.58 - 2.2.2021",
+            "ending-time":"0.00 - 5.2.2021",
+            "options": [
+                "Ananas",
+                "Sushi",
+                "Tonnikala",
+                "Katkarapu",
+                "Oregano",
+                "Avocado",
+                "Pihvi"
+            ],
+            "voters": [
+                {
+                    "id": "1873",
+                    "choice":2
+                },
+                {
+                    "id":"1900",
+                    "choice":0
+                },
+                {
+                    "id":"2318",
+                    "choice":3
+                },
+                {
+                    "id":"12312321",
+                    "choice":3
+                },
+                {
+                    "id":"16124",
+                    "choice":3
+                },
+                {
+                    "id":"1255",
+                    "choice":2
+                }
+            ]
+        }
+    ]
+}

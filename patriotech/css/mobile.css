@@ -1,0 +1,12 @@
+@media only screen and (max-width:1500px) {
+    #desktop_menu {
+        display: none;
+    }
+    #mobile_menu {
+        display: block;
+    }
+
+    .content {
+        background-color: black;
+    }
+}

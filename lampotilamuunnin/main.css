@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    background-image: url(temp1.jpg);
+    text-align: center;
+    background-size: cover;
+}
+
+#content {
+    margin-top: 60px;
+    transform: translateX(-175px);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#top a {
+    top: 50px;
+}
+
+input, select, button {
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+#accu_input {
+    width: 50px;
+    text-align: center;
+}
+#out_put {
+    width: 255px;
+}
+#acc {
+    transform: translateX(100px);
+}
+
+a {
+    font-size: 22px;
+}
+
+#in_put, #out_put {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input, select, option, button {
+    border-radius: 6px;
+    margin: 10px;
+}
+
+#right_panel {
+    position: absolute;
+    width: 40%;
+    height: 600px;
+    top: 20%;
+    left: 58%;
+    background-color: rgba(99, 85, 85, 0.644);
+    border-radius: 20px;
+}
+#right_panel p {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+footer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    background-color: rgba(116, 101, 131, 0.815);
+    font-size: 25px;
+}

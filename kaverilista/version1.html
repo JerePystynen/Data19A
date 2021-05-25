@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/group.png" type="image/x-icon">
+    <title>Version 1</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+    body {
+        background-color: rgb(76, 122, 95);
+    }
+    nav {
+        position: absolute;
+        margin: 0;
+        padding: 1rem;
+        padding-left: 10rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        background-color: gray;
+    }
+    nav a {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<script>
+    window.onload = function() {
+        document.getElementById("enter-btn").addEventListener("click", function() {
+            var li = document.createElement("li")
+            li.appendChild(document.createTextNode(document.getElementById("fname").value))
+            document.getElementById("list").appendChild(li)
+        })
+    }
+</script>
+<body>
+<nav>
+    <a href="index.html">Index</a>
+    <a href="version2.html">Version 2</a>
+</nav>
+<div>
+    <h1>Friend List / Kaverilista (Version 1)</h1>
+    <input type="text" id="fname" placeholder="Enter you friends name...">
+    <button id="enter-btn">Enter</button>
+    <ul id="list"></ul>
+</div>
+</body>
+</html>

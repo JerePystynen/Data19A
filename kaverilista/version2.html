@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/group.png" type="image/x-icon">
+    <title>Version 2</title>
+</head>
+<script>
+    let method = 0 //0 = none, 1 = alphabetically, 2 = reverse alphabetically
+    var listEle, sortBtn
+    let Names = []
+    window.onload = function() {
+        listEle = document.getElementById("list")
+        sortBtn = document.getElementById("sort-btn")
+        document.getElementById("add-btn").addEventListener("click", function() {
+            var li = document.createElement("li")
+            var name = document.getElementById("fname").value
+            li.appendChild(document.createTextNode(name))
+            listEle.appendChild(li)
+            Names.push(name)
+            updateList()
+        })
+        document.getElementById("rem-btn").addEventListener("click", function() {
+            for (let i = 0; i < Names.length; i++) {
+                if (listEle.children[i].innerHTML == document.getElementById("fname").value) {
+                    listEle.children[i].remove()
+                    Names.splice(i, 1)
+                    break
+                }
+            }
+        })
+        sortBtn.addEventListener("click", function() {
+            if (method < 2) method++; else method = 0
+            updateList()
+        })
+        function updateList() {
+            let array = []
+            switch (method) {
+                case 0: //none - reset the ordering to what it was before sorting
+                    sortBtn.innerHTML = "Sort Friends ↑↓"
+                    for (let x = 0; x < listEle.children.length; x++) listEle.children[x].innerHTML = Names[x]
+                    break
+                case 1: //alphabetically order
+                case 2: //reverse alphabetically order
+                    sortBtn.innerHTML = `Sort Friends ${method == 1 ? '↑' : '↓'}`
+                    for (let x = 0; x < listEle.children.length; x++) array.push(listEle.children[x])
+                    array.sort(function(a, b) {
+                        return a.innerHTML == b.innerHTML
+                            ? 0 : (method == 1) ? (a.innerHTML > b.innerHTML ? 1 : -1) : (a.innerHTML < b.innerHTML ? 1 : -1)
+                    })
+                    for (i = 0; i < array.length; ++i) list.appendChild(array[i]);
+                    break
+            }
+        }
+    }
+</script>
+<style>
+    * {
+        font-family: sans-serif;
+        overflow-x: hidden;
+    }
+    body {
+        background-color: rgb(76, 122, 95);
+    }
+    nav {
+        position: absolute;
+        margin: 0;
+        padding: 1rem;
+        padding-left: 10rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2rem;
+        background-color: gray;
+    }
+    nav a {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+<nav>
+    <a href="index.html">Index</a>
+    <a href="version1.html">Version 1</a>
+</nav>
+<div>
+    <h1>Friend List / Kaverilista (Version 2)</h1>
+    <input type="text" id="fname" placeholder="Enter name...">
+    <button id="add-btn">Add Friend</button>
+    <button id="rem-btn">Remove Friend</button>
+    <button id="sort-btn">Sort Friends ↑↓</button>
+    <ul id="list"></ul>
+</div>
+</body>
+</html>
